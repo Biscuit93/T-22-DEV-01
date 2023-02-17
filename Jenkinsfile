@@ -8,6 +8,13 @@ pipeline {
                 }
             }
         }
+        stage('AFerski - Test Docker Image') {
+            steps {
+                script {
+                    sh 'docker run biscuit93/python-t22dev01'
+                }
+            }
+        }
         stage('AFerski - Login to Docker Hub') {
             steps {
                 script{
